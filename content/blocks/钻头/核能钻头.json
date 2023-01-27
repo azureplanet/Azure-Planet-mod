@@ -1,0 +1,60 @@
+{
+	"type": "Drill",
+	"name":"核能钻头",
+    "description": "终极钻头，效率极高，必须冷却才能工作。",
+    "health":1250,
+    "itemCapacity":20,
+    "tier":999,
+    //钻头的开采等级
+    "drillTime":90,
+    //矿物开采耗时
+    "size": 4,
+    //《3》
+    "group":"drills"
+    "haspower":false
+    "hasLiquids": true,
+	"alwaysUnlocked":false,
+	"liquidCapacity":15,
+    "drawMineItem":true,
+    //是否在中心绘画所采矿物的颜色
+    "drillEffect": "mineHuge",
+    "updateEffect":"pulverizeRed",
+    "drawRim":true,
+    "heatColor":"FF5511",
+    //开采出矿物时的颜色
+    "rotateSpeed": 10,//贴图转速
+    "liquidBoostIntensity":2.9,
+    "warmupSpeed": 0.005,
+    //钻头完全启动的速度(一除以(此数值*60)(单位/秒))
+	"consumes":{
+		"power": 5,//"耗电": ？,(1=游戏内耗电60)
+		"liquid":{
+			"liquid":"water",//"液体类型": "？",(cryofluid=冷冻液)
+			"amount":0.1,//"数量": ？,(0.01=游戏里液体消耗量0.6)
+			"optional":false,//"可选的": "？",(true=是)
+			}
+	}
+    "requirements": [
+        { "item": "silicon", "amount":150},
+        { "item": "钴", "amount":120},
+        { "item": "钴钢", "amount":100},
+        { "item": "surge-alloy", "amount":80},
+        { "item": "矢量合金", "amount":60}
+    ],
+    "research": "blast-drill",
+    "category": "production"
+    "effect":[{
+        "type":"WaveEffect",
+        "colorFrom":"FF00FF",//颜色从
+        "colorTo":"00FF00",//颜色至
+        "lightColor":"000000",//浅色
+        "sizeFrom":100,//开始时圆环直径
+        "sizeTo":10,//结束时圆环直径
+        "lightOpacity":0.8,//光不透明
+        "strokeFrom":100,//开始时圆形宽度
+        "strokeTo":10,//结束时圆环宽度
+        "offsetX":0.0,//偏转x
+        "offsetY":0.0//偏转y
+        }
+    ]
+}

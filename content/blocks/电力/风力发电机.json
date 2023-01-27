@@ -1,0 +1,30 @@
+{
+	"type": "SolarGenerator",
+	"name": "风力发电机",
+	"category": "power",
+	"requirements": [
+		"graphite/350",
+		"silicon/180"
+	],
+	"hasItems": false,
+	"hasLiquids": false,
+	"size": 2,
+	"powerProduction": 3,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-rotator",
+				"rotateSpeed": 1,
+				"layer": 80
+			},
+			{
+			    "type": "DrawRegion",
+				"suffix": "-top",
+				"layer": 81
+			}
+			"DrawDefault"
+		]
+	}
+}

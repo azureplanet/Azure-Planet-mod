@@ -1,0 +1,26 @@
+{
+	"type": "flying",//类型
+	"defaultController": "MinerAI",//ai,矿机ai
+	"flying":true,//飞行
+	"name": "幼蜂",//名字
+	"description": "自动开采矿物并运回核心中。",//介绍
+	"details":""//剧情
+
+	"research": {
+	"parent": "单位厂"//科技树前置
+	"requirements": [//研究花费
+	"graphite/300",
+	"silicon/250"]	},
+
+	"hitSize":8,//大小
+	"mineWalls": true,//挖墙
+	"mining": true,//挖矿
+	"engineSize":4,//引擎尺寸
+	"engineOffset":2,//引擎偏移
+	"speed":1.5,//速度
+	"health":250,//血量
+	"itemCapacity":30,//物品容量
+	"mineSpeed":2.5,//挖矿速度
+	"mineTier":1,//挖矿等级
+    "outlineColor":"2C2A35FF",
+}

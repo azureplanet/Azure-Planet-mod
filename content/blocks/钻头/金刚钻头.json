@@ -1,0 +1,45 @@
+{
+	"type": "Drill",
+	"name":"金钢钻头",
+    "description": "可以采掘所有矿物，代价是速度极慢。[green]前期万能钻头",
+    "health":140,
+    "itemCapacity":15,
+    "tier":114514,
+    //钻头的开采等级
+    "drillTime":340,
+    //矿物开采耗时
+    "size": 3,
+    "group":"drills"
+    "haspower":false
+    "hasLiquids": true,
+	"alwaysUnlocked":false,
+	"liquidCapacity":18,
+    "drawMineItem":true,
+    //是否在中心绘画所采矿物的颜色
+    "drillEffect": "mineHuge",
+    "updateEffect":"pulverizeRed",
+    "drawRim":true,
+    "heatColor":"FF5511",
+    //开采出矿物时的颜色
+    "rotateSpeed": 6,//贴图转速
+    "warmupSpeed": 0.5,
+    //钻头完全启动的速度(一除以(此数值*60)(单位/秒))
+	"consumes": {
+		"liquid": {
+			"liquid":"water",
+			"amount":0.08,
+			"booster": true,
+			//加速
+			"optional": true
+			//可选
+		}
+		//"items":{"items":["blast-compound/1"],},
+	}
+    "requirements": [
+        { "item": "graphite", "amount":40},
+        { "item": "钴", "amount":35},
+        { "item": "金刚石", "amount":30}
+    ],
+    "research": "pneumatic-drill",
+    "category": "production"
+}

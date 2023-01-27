@@ -1,0 +1,55 @@
+{
+  "type": "legs",
+  "name": "虎甲",
+  "description": "虎甲，是昆虫纲 鞘翅目 虎甲科 昆虫的统称，为中等大的甲虫，一般有鲜艳的颜色和斑斓的色斑。",
+  "hitSize": 10,
+  "hovering": false,
+  "drawShields": false,
+  "allowLegStep": true,
+  "groundLayer": 74,
+  "health": 1080,
+  "armor": 6,
+  "speed": 1.25,
+  "rotateSpeed": 3,
+  "legCount": 6,
+  "legLength": 4,
+  "legBaseOffset": 3,
+  "legExtension": -3,
+  "legGroupSize": 4,
+  "legStraightness": 0.5,
+  "legContinuousMove": true,
+  "legMoveSpace": 3,
+  "lockLegBase": true,
+  "legSplashDamage": 6,
+  "legSplashRange": 4,
+  "rippleScale": 0.2,
+  "maxStretch": 0.2,
+  "ammoType": {
+    "type": "PowerAmmoType"
+  },
+  "ammoCapacity": 20,
+  "weapons": [
+    {
+      "name": "虎甲-嘴",
+      "status": "null",
+      "y": 8,
+      "x": 2,
+      "mirror": true,
+      "shoots": 1,
+      "rotate": false,
+      "recoil": 0,
+      "reload": 0,
+      "shootSound": "sap",
+      "bullet": {
+        "type": "SapBulletType",
+        "damage": 6,
+        "knockback": 0,
+        "length": 9,
+        "sapStrength": 0,
+        "color": "bf92f9",
+        "shootEffect": "shootLiquid",
+        "hitEffect": "hitLiquid"
+      }
+    }
+  ]
+}

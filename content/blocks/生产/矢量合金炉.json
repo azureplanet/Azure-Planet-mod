@@ -1,0 +1,104 @@
+{
+    "name": "矢量合金炉",
+    "type": "GenericCrafter",
+    "description": "阿巴阿巴",
+    "itemCapacity": 20,
+    "liquidCapacity":24,
+    "health": 720,
+    "size": 4,
+    "hasPower": true,
+    "hasLiquids":true,
+    "hasItems": true,
+    "craftTime":180,
+    "consumes": {
+    "power":9
+    "items": {
+            "items": [
+                {
+                    "item": "钴",
+                    "amount": 3
+                },
+                {
+                    "item": "blast-compound",
+                    "amount": 2
+                },
+                {   
+                    "item":"钴钢",
+                    "amount":2
+                },
+                {   
+                    "item":"surge-alloy",
+                    "amount":1
+                }
+            ]
+        }
+        "liquids": {
+            "liquids": [
+                {
+                    "liquid": "cryofluid",
+                    "amount": 0.05
+                },
+            ]
+        }
+        },
+        "outputItem": {
+        "item": "矢量合金",
+        "amount":2
+        }
+        "requirements": [
+        {
+            "item": "copper",
+            "amount": 600
+        },
+        {
+            "item": "metaglass",
+            "amount": 500
+        },
+        {
+            "item": "silicon",
+            "amount": 300
+        },
+        {
+            "item": "surge-alloy",
+            "amount": 400
+        }
+    ],
+    "drawer":{
+           "type":"DrawMulti",
+         "drawers":[
+		{
+	    "type":"DrawRegion",
+	    "suffix":"-bottom"
+	    },
+		 {
+	    "type":"DrawLiquidTile",
+	    "drawLiquid":"cryofluid"
+	    },
+	    "DrawDefault",
+	{
+				"type": "DrawFrames",
+				"interval": 60
+				"sine": false
+			}
+         ]
+    },
+    "effect":[{
+        "type":"WaveEffect",
+        "colorFrom":"FF00FF",//颜色从
+        "colorTo":"00FF00",//颜色至
+        "lightColor":"000000",//浅色
+        "sizeFrom":0,//开始时圆环直径
+        "sizeTo":100,//结束时圆环直径
+        "lightOpacity":1,//光不透明
+        "strokeFrom":10,//开始时圆形宽度
+        "strokeTo":0,//结束时圆环宽度
+        "offsetX":0.0,//偏转x
+        "offsetY":0.0//偏转y
+        }
+    ]
+    "category": "crafting",
+    "research": "surge-alloy",
+    "idleSound": "respawning",
+    "idleSoundVolume": 0.5
+    }
+    

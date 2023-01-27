@@ -1,0 +1,37 @@
+{
+	"type": "ImpactReactor",
+	"name": "聚变反应堆",
+	"description": "依靠氢气聚变产生大量能量发电。\r[red]被摧毁时会发生剧烈爆炸",
+ 	"details":"反应堆被摧毁之时 便是基地沦陷之日",
+	"size":5,
+	"health":2700
+	"liquidCapacity": 40,
+	"itemCapacity":20,
+	"warmupSpeed": 0.001,
+	"hasItems": false,
+	"hasLiquids": true,
+	"outputsPower": true,
+	"rebuildable": false,
+	"powerProduction": 416.5,
+	"itemDuration": 80,
+	"explosionRadius":35,
+    "explosionDamage":22000,
+	"lightColor":"FFFFFF",
+	"heating":0,
+	"consumes": {
+	"power": 25,
+	"liquid": {
+		"liquid": "hydrogen",
+		"amount": 0.2
+		},
+	},
+	"requirements": [
+		{ "item": "graphite",   "amount": 1200},
+		{ "item": "silicon",    "amount": 1000},
+		{ "item": "钴钢",       "amount": 850 },
+		{ "item": "surge-alloy","amount": 700 },
+		{ "item": "矢量合金",    "amount": 500 }
+	],
+	"category": "power",
+	"research": "impact-reactor"
+}

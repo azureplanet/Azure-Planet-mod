@@ -1,0 +1,110 @@
+{
+    "type":"PowerTurret",
+	"size": 3,
+	"name":"流离",
+	"description":"发射移动缓慢的球状闪电，击中敌人时发生剧烈爆炸。有一定的追踪能力。",
+	"category":"turret",
+	"health": 1250,
+	"reload": 180,
+	"range": 400,
+	"shots" : 1,
+	"targetAir" : true, 
+	"targetGround" : true,
+	"shootCone" : 2,
+	"rotateSpeed": 3,
+	"consumes": {
+	     "power": 3,
+	     "coolant": {
+           "amount": 0.2,
+           "optional": true
+          }
+    },
+	"hasPower" : true,
+	"liquidCapacity": 20,
+    "shoot":{
+		"type":"ShootPattern",
+		"firstShotDelay":150
+	},
+	"moveWhileCharging": false,
+    "chargeSound":"lasercharge2",
+    "shootSound" : "laserbig",
+	"shake":1,
+	"inaccuracy": 1,
+	"recoil": 1,
+	"recoilTime":120, 
+	"shootType": {
+    	"type": "BasicBulletType",
+    	"damage": 150,
+    	"splashDamageRadius":85,
+    	"splashDamage":50,
+    	"ammoMultiplier":1,
+    	"frontColor":"92ABFFFF",
+    	"backColor":"92ABFFFF",
+    	"shrinkY":0,
+    	"sprite":"circle",
+    	"width": 20,
+    	"height": 20,
+    	"hitEffect":"bigShockwave",
+    	"despawnEffect":"bigShockwave",
+    	"speed": 2,
+    	"lifetime": 200,
+    	"lightningColor":"92ABFFFF",
+		"lightning":9,
+		"lightningLength":9,
+		"lightningDamage":80,
+		"homingPower":0.1,
+        "homingRange":80,
+        "status":"electrified",
+        "statusDuration":360,
+        "hitSound":"spark",
+    	"chargeEffect":{
+    		"type": "MultiEffect",
+    		"lifetime": 150,
+    		"effects": [
+        		{     
+        		"type": "ParticleEffect",
+        		"particles": 8,
+        		"sizeFrom": 0,
+        		"sizeTo": 3,
+        		"length": 150,
+        		"baseLength": -150,
+        		"lifetime": 150,
+        		"colorFrom": "FFFFFF",
+        		"colorTo": "92ABFFFF",
+        		"cone": 360
+       		    },
+    		    {     
+        		"type": "ParticleEffect",
+        		"particles": 1,
+        		"sizeFrom": 0,
+        		"sizeTo": 11,
+        		"length": 0,
+        		"baseLength": -0,
+        		"lifetime": 150,
+        		"colorFrom": "FFFFFF",
+        		"colorTo": "92ABFFFF",
+        		"cone": 360
+       		    }
+   		    ]
+		},
+	    "bulletInterval": 2.5,
+		"intervalBullets": 1,
+		"intervalSpread": 12,
+		"intervalBullet": {
+			"type": "LightningBulletType",
+			"damage": 8,
+			"lightningColor":"92ABFFFF",
+			"hitColor":"92ABFFFF",
+			"lightningLength": 5,
+			"lightningLengthRand": 2,
+			"hitEffect": "hitLancer",
+			"despawnEffect": "none"
+				}
+    },
+	"requirements": [
+		{ "item": "钴", "amount": 100},
+		{ "item": "silicon", "amount": 70},
+		{ "item": "titanium", "amount": 120}
+	],
+	"research": "mend-projector"
+}

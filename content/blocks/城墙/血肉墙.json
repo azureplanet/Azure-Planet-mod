@@ -1,0 +1,31 @@
+{ 
+    "name":"血肉墙",
+    "type":"RegenProjector",
+    "description":"可以自动回血的生物墙。[yellow]跟泰拉没半点关系（bushi）"
+    "range":1,
+    //修复范围
+    "group":"walls"
+    //方块组别：墙
+    "healPercent":0.025,
+    //修复百分比
+    "phaseBoost":0,
+    //加速百分比
+    "hasPower":false,
+    "phaseRangeBoost":0,
+    //加速范围百分比
+    "health":550,
+    //血量
+    "size":1,
+    //大小
+    "canOverdrive":true,
+    //能否超频
+    "baseColor":"F6BB64FF",
+    //正在修复时的特效颜色
+    //"phaseColor":""
+    //待机时的特效颜色
+    "requirements":[
+    	{ "item": "生物质", "amount": 6 },
+    ],
+    "category":"defense",
+    "research":"copper-wall-large",
+}

@@ -1,0 +1,42 @@
+{
+	"type": "GenericCrafter",
+	"name": "氢气提取器",
+	"description": "从塞普罗的大气中提取氢气 \n 电解器：喵喵喵？",
+	"health": 160,
+	"outputLiquid": {"liquid": "hydrogen", "amount": 0.1},
+	"itemCapacity": 0,
+	"size": 2,
+	"drawer":{
+	    "type":"DrawMulti",
+	    "drawers":[
+	    {
+	    "type":"DrawRegion",
+	    "suffix":"-bottom"
+	    },
+	    {
+	    "type":"DrawLiquidTile",
+	    "drawLiquid":"hydrogen"
+	    },
+	    "DrawDefault"
+	]},
+    "hasItems": false,
+	"hasLiquids": true,
+	"solid": true,
+	"outputsLiquid": true,
+	"hasPower": true,
+	"liquidCapacity": 360,
+	"craftTime": 90,
+	"updateEffect": "none",
+	"consumes": {
+		"power": 1
+	},
+	"requirements": [
+	{"item": "graphite", "amount": 30},
+	{"item": "silicon", "amount": 40},
+	{"item": "钴","amount":50}
+	],
+	"category": "production",
+	"research": "water-extractor",
+	"idleSound": "respawning",
+	"idleSoundVolume": 0.5
+}

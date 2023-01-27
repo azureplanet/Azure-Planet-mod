@@ -1,0 +1,39 @@
+{
+	"type": "GenericCrafter",
+	"health": 420,
+	"name": "钴钢熔炼炉",
+	"description": "将钴与铬熔炼为应用广泛的钴钢。",
+	"outputItem": {"item": "钴钢", "amount": 2},
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 100,
+	"itemCapacity": 20,
+	"updateEffect": "burning",
+	"consumes": {
+    "power":1.5,
+    "items": {
+	 "items": [
+	  { "item": "钴", "amount":2},
+	  { "item": "铬", "amount":3}
+	]
+  }
+ },
+"requirements": [
+		{ "item": "silicon", "amount": 120},
+		{ "item": "钴", "amount": 100},
+		{ "item": "金刚石", "amount": 80},
+		{ "item": "铬", "amount": 60}
+	],
+	"drawer": {
+	"type": "DrawMulti",
+	"drawers": [
+		"DrawDefault"
+		]
+	},
+	"category": "crafting",
+	"research": "silicon-smelter",
+	"idleSound": "respawning",
+	"idleSoundVolume": 0.5
+}

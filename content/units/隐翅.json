@@ -1,0 +1,29 @@
+{
+"type": "legs"
+"name": "隐翅"
+"drag":0.1
+"speed":0.6
+"hitSize": 5
+"health": 200
+"armor": 13
+"rotateSpeed": 1
+"drownTimeMultiplier": 2
+"hovering": true
+"shadowElevation": 0.65
+"groundLayer": 75
+"allowLegStep": true
+
+"legCount": 6
+"legMoveSpace": 1
+"legPairOffset": 3
+"legLength": 3
+"legExtension": -9
+"legBaseOffset": 10
+"stepShake": 1
+"legLengthScl": 0.96
+"legSplashDamage": 10
+"legSplashRange": 10
+"rippleScale": 2
+"legSpeed": 2
+
+}

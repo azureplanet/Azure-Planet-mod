@@ -1,0 +1,43 @@
+{
+    "type": "flying",
+    "name": "瘟蚊",
+    "mass": 5,
+    "description": "会吸血的小蚊子~~~.\n[yellow]《谨防蚊虫叮咬》",
+    "outlineColor":"2C2A35FF"
+    "speed": 6,
+    "drag": 0.05,
+    "accel": 0.06,
+    "rotateSpeed": 10,
+    "ammoCapacity": 300,
+    "ammoResupplyAmount": 6,
+    "hitSize": 8,
+    "buildSpeed": 0,
+    "engineColor": "FFFFFF",
+    "flying": true,
+    "health": 200,
+    "armor": 2,
+    "engineOffset": 5,
+    "engineSize": 2,
+    "research": "flare",
+    "weapons": [
+        {
+            "name": "吸血激光",
+            "y": 1,
+            "x": 6,
+            "rotate": true,
+            "recoil": 8,
+            "reload": 8,
+            "shootSound": "sap",
+            "bullet": {
+                "type": "SapBulletType",
+                "damage": 9,
+                "knockback": 0,
+                "length": 1,
+                "sapStrength": 0.3,
+                "color": "bf92f9",
+                "shootEffect": "shootLiquid",
+                "hitEffect": "hitLiquid"
+            }
+        }
+    ]
+}

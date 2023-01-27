@@ -1,0 +1,100 @@
+{   
+    //基础显示类
+    //类型 TractorBeamTurret 就是差扰光束类
+	"type":"TractorBeamTurret",
+	
+	//名字
+	"name": "钴磁光束",
+	//简介
+	"description": "强力差扰光束，利用钴的磁性，将单位拽过来。[green]用于防止敌人卡射程走位",
+	
+	//基础值类
+	//是否对空 true＝是 false＝否
+	"targetAir": true,
+	
+	//是否对地 true＝是 false＝否
+	"targetGround": true,
+	
+	//炮台生命值
+	"health":600,
+	
+	//炮台大小 1＝32*32
+	"size":2,
+	
+    //炮台旋转速度 默认10
+	"rotateSpeed":999,
+	
+	//炮台范围 8＝1格
+	"range":240,
+	
+	//音效类
+    //射击音效 默认minebeam
+	"shootSound":"sap"
+	
+	//科技树类
+	//科技树位置 duo＝初始核心
+	"research": "parallax",
+	
+	//建造菜单 turret＝炮台类
+	"category": "turret",
+	
+	//是否使用电 true＝是  false＝否
+	"hasPower":true
+	
+	//颜色类
+	//激光颜色
+	"laserColor":"ffccff"
+	
+	//炮台发光颜色
+	"lightColor":"3D75F7FF"
+	
+	//差扰光束类
+	//引力 默认6
+	"force":60
+	
+	//引力递增比例
+	"scaledForce":3
+	
+	//伤害递增比例
+	"scaledHealth":-0.1
+	
+	//伤害 1＝60/s
+	"damage":0.5
+	
+	//消耗类
+	//炮台输入
+	"consumes":
+	{
+	"power":3
+	//电 1＝60    
+    
+    }
+    
+    //建造材料
+    "requirements":[
+        
+        //铜 150
+		{ "item":"copper","amount": 150 }
+		{ "item":"lead","amount": 120 }
+		{ "item":"钴","amount": 90 }
+		{ "item":"金刚石","amount": 50 }
+		
+	],
+    
+}
+
+//源码
+/*parallax = new TractorBeamTurret("parallax"){{
+            requirements(Category.turret, with(Items.silicon, 120, Items.titanium, 90, Items.graphite, 30));
+
+            hasPower = true;是否用电
+            size = 2;大小
+            force = 12f;力
+            scaledForce = 6f;力比例
+            range = 240f;范围
+            damage = 0.3f;伤害
+            scaledHealth = 160;伤害比例
+            rotateSpeed = 10;炮台旋转速度
+
+            consumePower(3f);使用电力1:60
+        }};

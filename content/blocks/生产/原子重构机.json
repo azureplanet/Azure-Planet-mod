@@ -1,0 +1,26 @@
+{
+	"name": "原子重构机",
+	"description": "简介招租",
+	"health": 360,
+	"size": 4,
+	"hasPower": true,
+	"hasItems": true,
+	"hasLiquids":true,
+	"drawer":{
+        "type":"DrawMulti",
+        "drawers":[
+            "DrawDefault",
+    {"type":"DrawRegion",
+    "suffix":"-轮",
+    "spinSprite":true,
+    "rotateSpeed":6}
+    
+    ]},
+	"itemCapacity":20,
+	"requirements": [
+ 	{ "item": "lead", "amount": 80 },
+ 	{ "item": "metaglass", "amount":20 },
+	{ "item": "silicon", "amount": 30 }
+	],
+	"category": "crafting"
+}

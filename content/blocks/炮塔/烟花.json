@@ -1,0 +1,156 @@
+{
+	"type": "ItemTurret",
+	"name": "烟花",
+	"description":"向敌人发射一枚集束烟花导弹，在击中后分裂。"
+	"details":"几乎所有单位都有对应攻击方式的炮塔，江豚却没有！这不公平！"
+	"size": 4,
+	"category": "turret",
+	"research": "spectre",
+	"coolantMultiplier": 1.5,
+	"requirements": [
+		"silicon/720",
+		"钴/500",
+		"铬/350"
+	],
+	"range": 240,
+	"ammoPerShot": 1,
+	"maxAmmo": 20,
+	"targetAir": true,
+	"recoil": 0.7,
+	"reload": 60,
+	"rotateSpeed": 2,
+	"minWarmup": 0.9,
+	"shootWarmupSpeed": 0.09,
+	"shootSound": "missile",
+    "consumes": {
+         "coolant": {
+           "amount": 0.2,
+           "optional": true
+         }
+    },
+	"ammoTypes": {
+		"矢量合金": {
+			"type": "MissileBulletType",
+            "sprite": "missile-large",
+            "speed": 3,
+			"explodeRange":40,
+			"width":12,
+			"height":12,
+            "homingRange":60,
+            "splashDamageRadius":30,
+            "splashDamage":25,
+            "damage":50,
+            "lifetime":80,
+            "backColor":"FFD37FFF",
+            "frontColor":"FFD37FFF",
+            "trailColor":"FFD37FFF",
+    		"lightColor": "FFD37FFF",
+    		"trailLength": 29,
+			"trailWidth": 3.5,
+			"trailSinScl": 2.5,
+			"trailSinMag": 0.5,
+			"trailEffect": "none",
+			"weaveScale":8,
+            "weaveMag":1,
+            "fragBullets":8,
+            "fragVelocityMin":0.3,
+            "hitEffect":{
+                "effect":[
+                    {
+                    "type":"ExplosionEffect",
+                    "lifetime":28,
+                    "waveStroke":6,
+                    "waveLife":10,
+                    "waveRadBase":7,
+                    "waveColor":"FFD37FFF",
+                    "waveRad":30,
+                    "smokes":6,
+                    "smokeColor":"ffffffff",
+                    "sparkColor":"FFD37FFF",
+                    "sparks":6,
+                    "sparkRad":35,
+                    "sparkStroke":1.5,
+                    "sparkLen":4
+                    }
+                ]
+            },
+            "fragBullet":{
+                "type": "MissileBulletType",
+                "sprite": "missile-large",
+                "speed": 3,
+    			"explodeRange":40,
+    			"width":4,
+    			"height":4,
+                "homingRange":60,
+                "homingPower":0.2,
+                "splashDamageRadius":20,
+                "splashDamage":26,
+                "damage":50,
+                "lifetime":60,
+                "backColor":"FFD37FFF",
+                "frontColor":"FFD37FFF",
+                "trailColor":"FFD37FFF",
+        		"lightColor": "FFD37FFF",
+        		"trailLength": 20,
+    			"trailWidth": 2.5,
+    			"trailSinScl": 2.5,
+    			"trailSinMag": 0.5,
+    			"trailEffect": "none",
+    			"weaveScale":4,
+                "weaveMag":4,
+                "hitEffect":{
+                    "effect":[
+                    {
+                    "type":"ExplosionEffect",
+                    "lifetime":20,
+                    "waveStroke":2,
+                    "waveLife":10,
+                    "waveRadBase":7,
+                    "waveColor":"FFD37FFF",
+                    "waveRad":12,
+                    "smokes":0,
+                    "smokeColor":"FFD37FFF",
+                    "sparkColor":"FFD37FFF",
+                    "sparks":9,
+                    "sparkRad":35,
+                    "sparkStroke":1.5,
+                    "sparkLen":4
+                    }
+                ]
+            },
+            }
+		}
+	},
+	"drawer": {
+		"type": "DrawTurret",
+        "parts": [
+             {
+                "type": "RegionPart",
+                "suffix": ""
+             },
+             {
+                "type": "RegionPart",
+                "suffix": "-side",
+                "heatProgress": "warmup",
+                "mirror": true,
+                "moveX": 1.5,
+                "moveY": -3,
+                "moveRot": -5,
+                "heatColor": "FFD37FFF"
+             },
+             {
+                "type": "RegionPart",
+                "suffix": "-barrel",
+                "progress": {
+                    "type": "recoil",
+                    "op": "curve",
+                    "interp": "pow2In"
+                },
+                "mirror": false,
+                "moveX": 0,
+	            "heatColor": "FFD37FFF",
+                "moveY": -5
+             },
+	       ]
+	   }
+}

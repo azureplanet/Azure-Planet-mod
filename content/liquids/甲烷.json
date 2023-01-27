@@ -1,0 +1,22 @@
+{
+	"name":"甲烷",
+	"description":"易燃的气体。可用于发电，或者作为弹药。",
+	"details": "哼，哼，哼，啊啊啊啊啊啊啊啊",
+	"color":"FBD367FF",
+	"barColor":"FBD367FF",
+	"lightColor":"FBD367FF",
+	"flammability":2.5,
+	//燃烧性
+	"temperature":0.5,
+	//液体温度
+	"heatCapacity":0.5,
+	//比热容
+	"viscosity":0.5,
+	//粘稠度
+	"explosiveness":0,
+	//爆炸性
+	"boilPoint":-1,
+	//沸点
+	"effect":"corroded",
+	"research":"spore-pod"
+}

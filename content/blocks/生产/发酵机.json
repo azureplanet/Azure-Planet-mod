@@ -1,0 +1,32 @@
+{
+	"type": "GenericCrafter",
+	"name": "发酵机",
+	"description":"利用生物质发酵生产甲烷。",
+	"health": 1200,
+	"outputLiquid": 
+	{"liquid": "甲烷", "amount": 0.1 }
+	"itemCapacity": 10,
+	"size": 2,
+    "hasItems": true,
+	"hasLiquids": true,
+	"solid": true,
+	"outputsLiquid": true,
+	"hasPower": true,
+	"liquidCapacity": 24,
+	"craftTime": 120,
+	"updateEffect": "freezing",
+	"consumes": {
+		"power": 1.8,
+	"items":{
+	"items": [
+	{ "item": "生物质", "amount": 1 }
+]
+}
+}
+	"requirements": [
+	{ "item": "lead", "amount": 70 },
+	{ "item": "silicon", "amount": 50 }
+	],
+	"category": "crafting",
+	"research": "melter"
+}

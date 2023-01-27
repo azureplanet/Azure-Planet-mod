@@ -1,0 +1,13 @@
+{
+	"type": "SolarGenerator",
+	"name": "潮汐发电机",
+	"category": "power",
+	"requirements": [
+		"graphite/350",
+		"silicon/180"
+	],
+	"hasItems": false,
+	"hasLiquids": false,
+	"size": 2,
+	"powerProduction": 3,
+}

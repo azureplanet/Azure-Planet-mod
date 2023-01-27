@@ -1,0 +1,92 @@
+{
+     "name":"核导弹发射器",//名称
+     "type":"ItemTurret",//种类
+     "description":"发射核弹头制导导弹，造成巨量伤害。",
+     "size":4,//尺寸
+     "health":2500,
+     "requirements":[
+     {"item":"lead","amount": 1200},
+     {"item":"silicon","amount": 1000},
+     {"item":"surge-alloy","amount": 840},
+     {"item":"钴","amount": 720},
+     {"item":"矢量合金","amount": 640}
+         ],//建材
+     "research":"foreshadow",//科技树前置
+     "category":"turret",//菜单栏
+     "ammoPerShot":30,//单发消耗
+     "ammoEjectBack":1,//子弹返还
+     "range":800,//射程，8/格
+     "reload":600,//装弹时间，60=1秒
+     "inaccuracy":0,//精准度
+     "recoil":0,//后坐力
+     "restitution":0,//每帧后坐力恢复
+     "cooldown":0.02,//每帧冷却
+     "speed":0.8,//炮台转速
+     "shootCone":3,//最大瞄准偏角
+     "shootShake":2,//射击抖动
+     "targetAir":false,//对空
+     "targetGround":true,//对地
+     "maxAmmo":60,//弹容量
+     "minWarmup": 0.85,
+     "shootWarmupSpeed": 0.07,
+     "shootEffect":"shootBig",
+     "smokeEffect":"shootSmokeMissile",
+     "shootSound":"spark",
+     "consumes":{
+        "power": 3,
+        "liquid":{
+            "liquid":"hydrogen",
+            "amount": 0.05,
+            "option": false
+        }
+     },
+     "ammoTypes": {
+	     "矢量合金": {
+	         "type": "BasicBulletType",
+             "spawnUnit": "GTX690",
+             "speed": 0,
+             "shootEffect": {
+	             "type": "MultiEffect",
+  	             "effects": [
+       		         {
+	                 "type": "RadialEffect",
+	                 "effect": "shootSmokeMissile",
+	               	},
+	            	{
+	                "type": "ParticleEffect",
+                  	"particles": 45,
+                 	"lifetime": 180,
+                 	"sizeFrom": 4,
+                   	"sizeTo": 0,
+	                "length": 120,
+	                "cone": 10,
+                  	"interp": "pow10In",
+                  	"sizeInterp": "pow5Out",
+	                "colorFrom": "FEB380AA",
+	                "colorTo": "FEB38000"
+               		}
+	             ]
+	         }
+		 }
+     },
+     "drawer": {
+		"type": "DrawTurret",
+        "parts": [
+             {
+                "type": "RegionPart",
+                "suffix": "-animation",
+                "heatProgress": "warmup",
+                "mirror": false,
+                "moveX": 0,
+                "moveY": -5
+                },
+             {
+                "type": "RegionPart",
+                "suffix": "-top",
+                "layer": 50,
+                "heatProgress": "warmup",
+                "heatColor":"0068FFFF"
+                }
+        ]        
+}
+}

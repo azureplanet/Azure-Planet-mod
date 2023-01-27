@@ -1,0 +1,38 @@
+{
+     "name":"孢子寄生",
+     "description":"你感觉自己的身体正在被抽干...",
+     "opposite":{ "statu": "孢子免疫"},
+     "damageMultiplier":0.8,
+     //伤害倍率
+     "healthMultiplier":0.85,
+     //生命倍率
+     "speedMultiplier":0.8,
+     //速度倍率
+     "reloadMultiplier":0.85,
+     //射速倍率
+     "damage":0.15,
+     //每帧对带有该状态的单位造成伤害
+     "permanent":false,
+     //true为永久携带该状态 false则反之
+     "color":"9E78DCFF",
+     //状态颜色
+     "disarm":false,
+     //是否对带有该状态的单位缴械
+     "effect": {
+	    "type":"ParticleEffect",
+	    //特效种类
+	    "lifetime":15,
+	    //存在时间
+	    "sizeFrom":0,
+	    //初始尺寸
+	    "sizeTo":3,
+	    //结束尺寸
+	    "colorFrom":"9E78DCFF",
+	    //初始颜色
+	    "colorTo":"5541B1FF",
+	    //结束颜色
+	    /*"effect":"none",*/
+	},
+	"effectChance":0.03
+	//特效密集程度
+}

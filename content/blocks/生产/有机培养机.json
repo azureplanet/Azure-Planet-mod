@@ -1,0 +1,48 @@
+{
+	"type": "GenericCrafter",
+	"name": "有机培养机",
+	"description":"将莱蒙星水中的微生物培养成生物质。",
+	"health": 1200,
+	"outputItem": 
+	{"item": "生物质", "amount": 2 }
+	"itemCapacity": 10,
+	"size": 2,
+    "hasItems": true,
+	"hasLiquids": true,
+	"solid": true,
+	"outputsLiquid": true,
+	"hasPower": false,
+	"liquidCapacity": 24,
+	"craftTime": 60,
+	"updateEffect": "none",
+	"consumes": {
+		"power": 0,
+	"liquid": 
+	{"liquid": "water", "amount": 0.2 }
+		},
+	"requirements": [
+	{ "item": "copper", "amount": 30 },
+	{ "item": "lead", "amount": 20 },
+	{ "item": "silicon", "amount": 10 }
+	],
+    "drawer":{
+	    "type":"DrawMulti",
+	    "drawers":[
+	        {
+	        	"type":"DrawDefault"
+	        },
+	        {
+	            "type":"DrawCultivator",
+	            "bottomColor":"4A4B53FF",
+	            "plantColor":"F6BB64FF",
+	            "plantColorLight":"DF824DFF"
+	        },
+	        {
+	            "type":"DrawRegion",
+	            "suffix":"-top",
+	        },
+	        ]
+	},
+	"category": "crafting",
+	"research": "cultivator"
+}

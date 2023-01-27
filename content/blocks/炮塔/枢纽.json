@@ -1,0 +1,50 @@
+{
+	"size": 2,
+	"name":"枢纽",
+	"description":"自动修复受损建筑，不会攻击敌人",
+	"type":"PowerTurret",
+	"health": 420,
+	"reload": 15,
+	"range": 240,
+	"inaccuracy": 0,
+	"shots" : 1,
+	"targetAir" : false, 
+	"targetGround" : false,
+	"targetHealing": true,
+	"shootCone" : 2,
+	"spread" : 4,
+	"recoil" : 0,
+	"restitution" : 0.04, 
+	"rotateSpeed": 8,
+	"shootSound" : "lasershoot",
+	"consumes": {
+	     "power": 3,
+	     "coolant": {
+           "amount": 0.2,
+           "optional": true
+          }
+    },
+	"hasPower" : true,
+	"liquidCapacity": 20,
+	"shootType" : {
+      "type" : "LaserBoltBulletType",
+      "speed":5,
+      "lifetime":48,
+      "width":2,
+      "height":8,
+      "ammoMultiplier": 1, 
+      "healPercent": 5,
+      "backColor":"98FFA9FF",
+      "collidesGround": true,
+      "collidesTeam":true,
+      "damage": 0,
+      "pierceCap":3
+      },
+	"requirements": [
+		{ "item": "钴", "amount": 100},
+		{ "item": "silicon", "amount": 70},
+		{ "item": "titanium", "amount": 120}
+	],
+	"category": "effect",
+	"research": "mend-projector"
+}

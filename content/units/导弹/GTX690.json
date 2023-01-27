@@ -1,0 +1,57 @@
+{
+	"name": "GTX690",
+	"type": "flying",
+	"description": "特别是其搭载GTX690战术核显卡的改进型号，一发就可以摧毁一个航母战斗群。",
+	"health": 1080,
+	"armor": 3,
+	"speed": 6,
+	"lifetime": 150,
+	"maxRange": 6,
+	"rotateSpeed": 1.2,
+	"engineColor": "FEB380",
+	"trailColor": "FEB380",
+	"engineLayer": 100,
+	"engineSize": 3.1,
+	"engineOffset": 10,
+	"trailLength": 18,
+	"missileAccelTime": 60,
+	"lowAltitude": true,
+	"fogRadius": 6,
+	"outlineColor": "6E7080FF",
+	"weapons": [
+		{
+			"shootCone": 360,
+			"mirror": false,
+			"reload": 1,
+			"shake": 10,
+			"shootOnDeath": true,
+			"shootSound": "plasmaboom",
+			"bullet": {
+				"type": "ExplosionBulletType",
+				"hitColor": "FFB381FF",
+				"shootEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						"titanExplosion",
+						"titanSmoke"
+					],
+					"Radius":120
+				},
+				"splashDamage": 1145,
+				"splashDamageRadius": 120,
+				"despawnShake": 3,
+				"fragVelocityMin": 1
+			}
+		}
+	],
+	"abilities": [
+		{
+			"type": "MoveEffectAbility",
+			"effect": "missileTrailSmoke",
+			"rotation": 180,
+			"y": -10,
+			"color": "FEB38080",
+			"interval": 9
+		}
+	]
+}

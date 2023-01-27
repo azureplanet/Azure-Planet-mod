@@ -1,0 +1,162 @@
+{
+    "type": "legs",
+    "name": "锹甲",
+    "description": "锹甲虫，也称鹿角虫，鞘翅目锹甲科",
+    "outlineColor":"2C2A35FF",
+    "hitSize":10,
+    "hovering":false,
+    "drawShields":false,
+    "allowLegStep":true,
+    "groundLayer":74,
+    "health":240,
+    "armor":3,
+    "speed":1.1,
+    "rotateSpeed":3,
+    "hasShader":true,
+    
+    
+    //腿部分
+    //腿数量
+    "legCount":6,
+    //腿长
+    "legLength":4,
+    //位置
+    //腿偏移
+    "legBaseOffset":3,
+    //腿缩放
+    "legExtension":-3,
+    //腿抬高
+    "legGroupSize":4
+    //平滑
+    "legStraightness":0.5
+    
+    //移动部分
+    "legContinuousMove":true
+    "legMoveSpace":3
+    "lockLegBase":true
+    
+    //踩踏部分
+    "legSplashDamage":6,
+    "legSplashRange":4,
+    //涟漪
+    "rippleScale":0.2,
+    //延伸
+    "maxStretch": 0.2,
+    
+    "ammoType": 
+ {
+        "type": "PowerAmmoType"
+ },
+    
+    "ammoCapacity": 20,
+    
+    "weapons": 
+ [
+  {
+            "name": "锹甲-嘴",
+            "status":"null"
+            "y": 6,
+            "x": 0,
+            "shoots": 1,
+            "rotate": false,
+            "recoil": 0,
+            "reload": 0,
+            "shootSound": "sap",
+            "bullet": 
+   {
+                "type": "SapBulletType",
+                "damage": 2.5,
+                "knockback": 0,
+                "length": 3,
+                "sapStrength": 0,
+                "color": "bf92f9",
+                "shootEffect": "shootLiquid",
+                "hitEffect": "hitLiquid"
+   }
+  }
+ ]
+}
+
+/*merui = new ErekirUnitType("merui"){{
+            speed = 0.72f;
+            drag = 0.11f;
+            hitSize = 9f;
+            rotateSpeed = 3f;
+            health = 680;
+            armor = 4f;
+            legStraightness = 0.3f;
+            stepShake = 0f;
+
+            legCount = 6;
+            legLength = 8f;
+            lockLegBase = true;
+            legContinuousMove = true
+            legExtension = -2f;
+            legBaseOffset = 3f;
+            legMaxLength = 1.1f;
+            legMinLength = 0.2f;
+            legLengthScl = 0.96f;
+            legForwardScl = 1.1f;
+            legGroupSize = 3;
+            rippleScale = 0.2f;
+
+            legMoveSpace = 1f;
+            allowLegStep = true;
+            hovering = true;
+            legPhysicsLayer = false;
+
+            shadowElevation = 0.1f;
+            groundLayer = Layer.legUnit - 1f;
+            targetAir = false;
+            researchCostMultiplier = 0f;
+
+            weapons.add(new Weapon("merui-weapon"){{
+                mirror = false;
+                x = 0f;
+                y = 1f;
+                shootY = 4f;
+                reload = 60f;
+                cooldownTime = 42f;
+                heatColor = Pal.turretHeat;
+
+                bullet = new ArtilleryBulletType(3f, 40){{
+                    shootEffect = new MultiEffect(Fx.shootSmallColor, new Effect(9, e -> {
+                        color(Color.white, e.color, e.fin());
+                        stroke(0.7f + e.fout());
+                        Lines.square(e.x, e.y, e.fin() * 5f, e.rotation + 45f);
+
+                        Drawf.light(e.x, e.y, 23f, e.color, e.fout() * 0.7f);
+                    }));
+
+                    collidesTiles = true;
+                    recoil = 0.5f;
+                    backColor = hitColor = Pal.techBlue;
+                    frontColor = Color.white;
+
+                    knockback = 0.8f;
+                    lifetime = 50f;
+                    width = height = 9f;
+                    splashDamageRadius = 19f;
+                    splashDamage = 30f;
+
+                    trailLength = 27;
+                    trailWidth = 2.5f;
+                    trailEffect = Fx.none;
+                    trailColor = backColor;
+
+                    trailInterp = Interp.slope;
+
+                    shrinkX = 0.6f;
+                    shrinkY = 0.2f;
+
+                    hitEffect = despawnEffect = new MultiEffect(Fx.hitSquaresColor, new WaveEffect(){{
+                        colorFrom = colorTo = Pal.techBlue;
+                        sizeTo = splashDamageRadius + 2f;
+                        lifetime = 9f;
+                        strokeFrom = 2f;
+                    }});
+                }};
+            }});
+
+        }};
+*/

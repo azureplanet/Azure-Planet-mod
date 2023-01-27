@@ -1,0 +1,100 @@
+{//模板作者VSHES荔枝、梓辰模板可随意套用
+	"type": "ContinuousLiquidTurret",//升华那一类
+	"name": "熔炉",//名字
+	"description":"向敌人持续发射高温火焰融化敌军。能够穿透护甲。"
+	"health":960,//血量
+    "shootY":3,//射击时y轴偏移
+	"size": 3,//炮台大小
+	"category": "turret",//显示在炮塔栏
+	"requirements": [
+		"copper/1",//建造花费
+	],
+	"recoil":0,//后坐力
+	"range": 200,//距离
+	"rotateSpeed": 2,//炮台旋转速度
+	"shootSound": "none",//设计音效
+	"loopSound":"torch",//攻击时的循环音效
+	"liquidConsumed":0.05,//60倍
+	"ammoTypes": {//子弹类
+		"甲烷": {//材料名字
+			"type": "ContinuousFlameBulletType",//升华那一类
+			"damage": 80,//伤害60倍
+            "length": 200,//长度，建议和距离相等
+            "knockback":1,//击退效果
+            "pierceCap":4,//穿透能力
+            "buildingDamageMultiplier":0.8,//对建筑的伤害倍率
+            "status":"melting",
+            "statusDuration": 600,
+            "colors": [
+                "FFD37FA1",
+                "FFD37FCC",
+                "FFD37FFF",
+                "FFE6B7FF",
+                "D8E2FFFF"
+                ],//火焰的颜色，上面外圈，下面内圈
+            "flareColor":"FBD367FF",//旋转十字的颜色
+            "hitColor":"FFD37FFF"//击中特效色
+		},
+		"hydrogen": {//材料名字
+			"type": "ContinuousFlameBulletType",//升华那一类
+			"damage": 40,//伤害
+            "length": 170,//长度，建议和距离相等
+            "knockback":0,//击退效果
+            "pierceCap":2,//穿透能力
+            "buildingDamageMultiplier":0.4,//对建筑的伤害倍率
+            "status":"burning",
+            "statusDuration":300,
+            "colors": [
+                "92ABFF7F",
+                "92ABFFA2",
+                "92ABFFD3",
+                "92ABFFFF",
+                "D4E0FFFF"
+                ],//火焰的颜色，上面外圈，下面内圈
+            "flareColor":"92ABFFFF",//旋转十字的颜色
+            "hitColor":"92ABFFFF"//击中特效色
+		}
+	},
+	"drawer": {
+		"type": "DrawTurret",
+        "parts": [
+             {
+                "type": "RegionPart",
+                "suffix": "-front",
+                "heatProgress": "warmup",
+                "mirror": true,
+                "moveX": 2,
+                "moveY": 0,
+                "heatColor": "FBD367FF"
+                },
+             {
+                "type": "RegionPart",
+                "suffix": "-back",
+                "heatProgress": "warmup",
+                "mirror": true,
+                "moveX": 1,
+                "moveY": -1,
+                "heatColor": "FBD367FF"
+                },
+                {
+                "type": "RegionPart",
+                "suffix": "-nozzle",
+                "progress": "warmup",
+                "mirror": true,
+                "moveX": 1.1,
+	            "heatColor": "FBD367FF",
+                "moveY": 0
+            },
+            {
+                "type": "RegionPart",
+                "suffix": "",
+                "progress": "warmup",
+                "heatColor": "FBD367FF"
+                },
+            {
+                "type": "RegionPart",
+                "suffix": "-top"
+                }
+	       ]
+	   }
+}

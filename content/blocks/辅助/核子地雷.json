@@ -1,0 +1,37 @@
+{
+	"type": "ShockMine",
+	"name": "核子地雷",
+	"description": "被触发之后会自爆，与触发它的单位一同消失的无影无踪",
+	"size": 1,
+	"health": 100,
+	"tileDamage": 100,
+	"tendrils": 0,
+	"shots": 1,
+	"cooldown": 300,
+	"hasShadow": false,
+	    "bullet":{
+	        "type":"basicBulletType"
+	        "damage": 0,
+			"speed": 1,
+			"lifetime": 1,
+			"splashDamage": 500,
+			"splashDamageRadius": 80,
+			"shootSound":"explosionbig",
+	    	"shootEffect": {
+			"type":"WrapEffect",
+			"effect":"titanExplosion",
+			"color":"2DC45AFF"
+		    },
+		    "hitEffect": {
+			"type":"WrapEffect",
+			"effect":"titanSmoke",
+			"color":"70DF91FF"
+		    },
+			}
+	"requirements": [
+		{ "item": "lead", "amount":12 }
+		{ "item": "铀", "amount":15 }
+	],
+	"category": "effect",
+	"research": "shock-mine"
+}

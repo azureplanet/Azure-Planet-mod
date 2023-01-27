@@ -1,0 +1,7 @@
+{
+"type":"Boulder",
+"name":"柠檬",
+"description":"小柠檬！",
+"breakable":true,
+"variants": 2
+}
